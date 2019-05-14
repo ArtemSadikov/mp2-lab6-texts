@@ -6,9 +6,16 @@
 
 #include <iostream>
 
+#include "../include/ttext.h"
+#include "../include/textviewer.h"
+
 using namespace std;
 
 int main()
 {
+  PTText pText;
+  TTextLink::InitMemSystem(50);
+  pText = new TText(new TTextLink((char*)"Header"));
+  TTextViewer::Interface(pText);
   return 0;
 }
